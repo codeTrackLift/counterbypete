@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+    transform: all 0.25s ease-in-out;
+}
+
+button:active {
+    background-color: transparent;
+}

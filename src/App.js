@@ -1,24 +1,43 @@
+import { useState } from 'react'
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    const [counter, setCounter] = useState(0)
+
+    return (
+        <div className="App">
+        <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <p>
+                Counter: 
+                <span data-testid='counter'> {counter}</span>
+            </p>
+            <button
+            data-testid='clickme'
+            onClick={() => setCounter(counter + 1)}
+            style={{
+                padding:'0.25rem 0.5rem',
+                borderRadius: '2px',
+                border: '2px solid black'
+            }}
+            >
+            Click Me
+            </button>
+            <br/>
+            <button
+            data-testid='reset'
+            onClick={() => setCounter(0)}
+            style={{
+                padding:'0.25rem 0.5rem',
+                borderRadius: '2px',
+                border: '2px solid black'
+            }}
+            >
+            Reset
+            </button>
+        </header>
+        </div>
   );
 }
 
