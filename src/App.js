@@ -19,7 +19,7 @@ function App() {
             style={{
                 padding:'0.25rem 0.5rem',
                 borderRadius: '2px',
-                border: '2px solid black'
+                border: '1px solid black'
             }}
             >
             Click Me
@@ -31,7 +31,7 @@ function App() {
             style={{
                 padding:'0.25rem 0.5rem',
                 borderRadius: '2px',
-                border: '2px solid black'
+                border: '1px solid black'
             }}
             >
             Reset
