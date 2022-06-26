@@ -17,14 +17,6 @@ test('Click Me button increments counter by 1', () => {
     expect(counter).toHaveTextContent(1);
 });
 
-test('Click Me button increments counter by 2', () => {
-    render(<App />);
-    const counter = screen.getByTestId('counter');
-    const clickme = screen.getByTestId('clickme');
-    fireEvent.click(clickme);
-    expect(counter).toHaveTextContent(2);
-});
-
 test('Reset button returns counter to 0, after counter is incremented a random number of times', () => {
     render(<App />);
     const counter = screen.getByTestId('counter');
